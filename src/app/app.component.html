@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container fullscreen>
+  <md-sidenav #sidenav mode="side">
+    <md-toolbar>
+      <span>Home</span>
+      <md-toolbar-row>
+        <button md-button routerLink="meow">Meow 🐱</button>
+      </md-toolbar-row>
+      <md-toolbar-row>
+        <button md-button routerLink="quack">Quack 🐤</button>
+      </md-toolbar-row>
+      <md-toolbar-row>
+        <button md-button routerLink="moo">Moo 🐮</button>
+      </md-toolbar-row>
+      <md-toolbar-row>
+        <button md-button routerLink="banana">Banana 🍌</button>
+      </md-toolbar-row>
+    </md-toolbar>
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button md-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <span routerLink="home">Punny 😂</span>
+  </md-toolbar>
+
+  <div class="body-margin">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
