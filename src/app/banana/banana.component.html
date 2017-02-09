@@ -1,3 +1,5 @@
+<app-home-link></app-home-link>
+
 <div>
   <h1 class="center-text primary-color">
     Banana Puns 🍌
@@ -8,3 +10,13 @@
   <img src="/assets/img/scared-banana.png" alt="scared banana picture">
 </div>
 
+<div>
+  <md-list>
+    <md-list-item *ngFor="let bananaPun of bananaPuns">
+      {{bananaPun.pun}}
+    </md-list-item>
+    <md-list-item>
+      <button md-raised-button color="primary">Give up?</button>
+    </md-list-item>
+  </md-list>
+</div>

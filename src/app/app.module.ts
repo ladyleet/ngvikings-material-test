@@ -11,6 +11,10 @@ import { QuackComponent } from './quack/quack.component';
 import { MooComponent } from './moo/moo.component';
 import { BananaComponent } from './banana/banana.component';
 import { HomeComponent } from './home/home.component';
+import { HomeLinkComponent } from './home-link/home-link.component';
+import { DialogInstructionsComponent } from './dialog-instructions/dialog-instructions.component';
+import { BananaSnackComponent } from './banana-snack/banana-snack.component';
+import { BananaDialogComponent } from './banana-dialog/banana-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,15 @@ import { HomeComponent } from './home/home.component';
     QuackComponent,
     MooComponent,
     BananaComponent,
-    HomeComponent
+    HomeComponent,
+    HomeLinkComponent,
+    DialogInstructionsComponent,
+    BananaSnackComponent,
+    BananaDialogComponent
+  ],
+  entryComponents: [
+    DialogInstructionsComponent,
+    BananaSnackComponent
   ],
   imports: [
     BrowserModule,
