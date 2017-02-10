@@ -12,11 +12,9 @@
 
 <div>
   <md-list>
-    <md-list-item *ngFor="let bananaPun of bananaPuns">
+    <md-list-item *ngFor="let bananaPun of bananas.puns">
       {{bananaPun.pun}}
-    </md-list-item>
-    <md-list-item>
-      <button md-raised-button color="primary">Give up?</button>
+      <button md-button color="primary" (click)="openBananaDialog(bananaPun.answer)" (click)="openSnackBar()">Give Up?</button>
     </md-list-item>
   </md-list>
 </div>

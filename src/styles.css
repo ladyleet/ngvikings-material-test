@@ -30,3 +30,8 @@ body {
 .center-text {
     text-align: center;
 }
+
+.card-width-height {
+    width: 350px;
+    height: 250px;
+}

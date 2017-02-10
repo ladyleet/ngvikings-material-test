@@ -13,8 +13,10 @@ import { BananaComponent } from './banana/banana.component';
 import { HomeComponent } from './home/home.component';
 import { HomeLinkComponent } from './home-link/home-link.component';
 import { DialogInstructionsComponent } from './dialog-instructions/dialog-instructions.component';
-import { BananaSnackComponent } from './banana-snack/banana-snack.component';
-import { BananaDialogComponent } from './banana-dialog/banana-dialog.component';
+import { BananaSnackComponent } from './banana/banana-snack/banana-snack.component';
+import { BananaDialogComponent } from './banana/banana-dialog/banana-dialog.component';
+import { BananaDataService } from './banana-data.service';
+import { CatDataService } from './cat-data.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { BananaDialogComponent } from './banana-dialog/banana-dialog.component';
   ],
   entryComponents: [
     DialogInstructionsComponent,
-    BananaSnackComponent
+    BananaSnackComponent,
+    BananaDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { BananaDialogComponent } from './banana-dialog/banana-dialog.component';
     MaterialModule.forRoot(),
     routing
   ],
-  providers: [],
+  providers: [BananaDataService, CatDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

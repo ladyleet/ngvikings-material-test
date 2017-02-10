@@ -6,6 +6,20 @@
   </h1>
 </div>
 
-<div class="center-text">
-  <img src="/assets/img/cat.jpg" alt="Picture of a laughing cat">
+<div>
+  <md-grid-list cols="2" rowHeight="400px">
+    <md-grid-tile *ngFor="let pun of catPuns.catPuns">
+      <md-card class="card-width-height">
+        <img src="/assets/img/cat-emoji.png" alt="cat emoji picture">
+        <md-card-content>
+          <div>
+            Question: {{pun.pun}}
+          </div>
+          <div>
+            Answer: {{pun.answer}}
+          </div>
+        </md-card-content>
+      </md-card>
+    </md-grid-tile>
+  </md-grid-list>
 </div>

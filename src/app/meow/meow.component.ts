@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CatDataService } from '../cat-data.service';
 
 @Component({
   selector: 'app-meow',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeowComponent implements OnInit {
 
-  constructor() { }
+  constructor(public catPuns: CatDataService) { }
 
   ngOnInit() {
   }

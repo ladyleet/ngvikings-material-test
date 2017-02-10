@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MdSnackBar } from '@angular/material';
-import { BananaSnackComponent } from '../banana-snack/banana-snack.component';
+import { MdSnackBar, MdDialog } from '@angular/material';
+import { BananaSnackComponent } from '../banana/banana-snack/banana-snack.component';
+import { BananaDialogComponent } from './banana-dialog/banana-dialog.component';
+import { BananaDataService } from '../banana-data.service';
 
 @Component({
   selector: 'app-banana',
@@ -9,16 +11,16 @@ import { BananaSnackComponent } from '../banana-snack/banana-snack.component';
 })
 export class BananaComponent implements OnInit {
 
-  constructor(public snackBar: MdSnackBar) { }
+  constructor(public snackBar: MdSnackBar, public dialog: MdDialog, public bananas: BananaDataService) { }
 
   openSnackBar() {
     this.snackBar.openFromComponent(BananaSnackComponent, { duration: 2000, });
   };
 
-  bananaPuns: Object=[] = [{
-    pun: "What did one single banana say to the other single banana?",
-    answer: "Banana date lately?"
-  }];
+  openBananaDialog(answer: string) {
+    const wut = this.dialog.open(BananaDialogComponent);
+    wut.componentInstance.answer = answer;
+  }
 
   ngOnInit() {
   }

@@ -50,7 +50,8 @@ export class HomeComponent implements OnInit {
     altText: "duck emoji",
     chip1: "duck",
     chip2: "quack",
-    chip3: "bird"  
+    chip3: "bird",
+    toolTip: "oops, this isn't done yet"  
   }];
 
 }

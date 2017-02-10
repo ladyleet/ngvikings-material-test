@@ -9,3 +9,18 @@
 <div class="center-text">
   <img src="/assets/img/cow.jpg" alt="picture of a funny smiling cow">
 </div>
+
+<div class="center-text">
+  <md-tab-group>
+    <md-tab *ngFor="let pun of cowPuns" label="{{pun.label}}">
+      <div>
+        <span>
+          {{pun.pun}} 
+        </span>
+      </div>
+      <div>
+        {{pun.answer}}
+      </div>
+    </md-tab>
+  </md-tab-group>
+</div>

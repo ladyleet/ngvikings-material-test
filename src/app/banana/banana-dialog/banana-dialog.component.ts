@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BananaDataService } from '../../banana-data.service';
 
 @Component({
   selector: 'app-banana-dialog',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banana-dialog.component.css']
 })
 export class BananaDialogComponent implements OnInit {
+
+  answer: string;
 
   constructor() { }
 

@@ -11,7 +11,7 @@
   <md-grid-list cols="2" rowHeight="300px">
     <md-grid-tile *ngFor="let pun of puns">
       <div>
-        <img src="/assets/img/{{pun.image}}" alt="{{pun.altText}}" routerLink="/{{pun.route}}">
+        <img src="/assets/img/{{pun.image}}" alt="{{pun.altText}}" routerLink="/{{pun.route}}" mdTooltip="{{pun.toolTip}}">
         <md-chip-list>
           <md-chip>{{pun.chip1}}</md-chip>
           <md-chip>{{pun.chip2}}</md-chip>
